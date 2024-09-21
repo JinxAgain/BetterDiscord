@@ -29,6 +29,12 @@
     }
 }
 
+%chat {
+    &%threadSidebarOpen {
+        border-radius: var(--app-card-radius);
+    }
+}
+
 %chatContent {
 	background-color: transparent;
 }
@@ -45,6 +51,14 @@
 
 %threadResizeHandle {
     background-color: var(--app-background);
+}
+
+%chatHeaderBar {
+    background-color: var(--background-tinted-active);
+
+    &:after {
+        display: none;
+    }
 }
 
 /* CHAT AREA -> DIVIDERS */
@@ -91,27 +105,27 @@
 /* CHAT AREA -> JUMP TO PRESENT BUTTON */
 
 %jumpToPresentBar {
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     padding-bottom: 0;
     border-radius: 4px;
 
     &:active {
-        margin-bottom: 28px;
+        margin-bottom: 6px;
     }
 }
 
 /* CHAT AREA -> PLACEHOLDER */
 
 %chatLoadingWrapper {
-	background-color: var(--app-foreground);
+	background: var(--app-foreground) !important;
 }
 
-%chatLoadingWrapper {
-	background-color: transparent;
+%chatLoadingMessageWrapper {
+	background: transparent !important;
 }
 
 %chatLoadingAttachment,
 %chatLoadingAvatar,
 %chatLoadingBlob {
-	background-color: hsl(0,0%,100%);
+	background: hsl(0,0%,100%) !important;
 }

@@ -7,13 +7,13 @@
  */
 
 %membersContainer {
-	background-color: var(--main-color);
+	background-color: transparent;
 }
 
 %members {
 	&,
 	& > div {
-		background: var(--main-color);
+		background: transparent;
 	}
 
     %listItem {
@@ -65,4 +65,21 @@
 			fill: var(--accent-text-color--material-you);
 		}
 	}
+}
+
+/* MEMBERS LIST -> ACTIVITIES */
+
+%memberActivityContainer {
+    padding: 8px 8px 8px 12px;
+    background-color: var(--card-color-filled);
+    border-radius: var(--card-radius-big);
+    transition: var(--default-time) var(--default-animation) background-color;
+
+    &:hover {
+        background-color: var(--card-color-hover);
+    }
+
+    %memberActivityThumbnail {
+        border-radius: calc(var(--card-radius-big) / 1.6);
+    }
 }

@@ -7,6 +7,7 @@
  */
 
 %channelsSidebar {
+	background-color: var(--main-color);
 	border-radius: var(--card-radius-big) 0 0 var(--card-radius-big) !important;
 	overflow: hidden;
 
@@ -14,9 +15,8 @@
 		border-radius: 0 !important;
 	}
 
-	&,
 	%channelsContainer {
-		background-color: var(--main-color);
+		background-color: transparent;
 	}
 
 	%channelsList {
@@ -243,8 +243,9 @@
 
 %channelNewChannel {
 	color: hsl(var(--accent-hsl--material-you));
+	text-transform: capitalize;
 
-	&[style="background-color: var(--brand-260);"] {
+	&[style="background-color: var(--badge-brand-bg);"] {
 		background-color: hsl(var(--accent-hsl--material-you)) !important;
         color: var(--accent-text-color--material-you);
 	}
@@ -350,12 +351,8 @@
 	transition: var(--default-time) var(--default-animation) color;
 }
 
-%voiceUserAvatar {
-    margin-left: 3px;
-
-	%voiceUserAvatarImage {
-		border-radius: var(--avatar-radius);
-	}
+%voiceUserAvatarImage {
+    border-radius: var(--avatar-radius);
 }
 
 %voiceUserOverlap {
@@ -424,9 +421,9 @@
             color: inherit;
         }
 
-        %textXSMedium {
+        %textXsMedium {
             color: inherit !important;
-            font-size: 16px;
+            font-size: var(--button-font-size);
         }
     }
 }

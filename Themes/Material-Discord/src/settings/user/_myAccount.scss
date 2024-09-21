@@ -16,14 +16,16 @@
 		padding: 16px 16px 16px 130px;
 
         %avatarWrapper {
+            width: 94px !important;
+            height: 94px !important;
             top: unset;
             bottom: 21px;
-			background-color: var(--card-color-filled);
+            background-color: var(--card-color-filled);
             border: 8px solid var(--card-color-filled);
-		}
+        }
     }
 
-    %settingsUserBannerSVGWrapper {
+    %settingsUserBannerSVGMask {
         circle {
             display: none;
         }
@@ -67,8 +69,14 @@
     %settingsBadgeList {
         height: 32px;
         padding: 0 8px;
-        background-color: var(--card-color-hover);
+        background-color: var(--card-color-hover) !important;
         border-radius: 16px;
+    }
+}
+
+%userProfileBanner {
+    &:before {
+        display: none;
     }
 }
 

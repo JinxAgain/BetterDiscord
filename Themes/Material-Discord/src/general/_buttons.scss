@@ -5,16 +5,17 @@
  */
 
 %button {
-	font-size: 14px !important;
+	font-size: var(--button-font-size) !important;
 
-	%textSMMedium,
-	%textSMSemibold,
-	%textSMBold,
-	%textMDSemibold {
+	%textSmMedium,
+	%textSmSemibold,
+	%textSmBold,
+	%textMdSemibold {
 		height: var(--button-height);
 		line-height: var(--button-height);
 		font-size: unset;
 		font-weight: 500;
+		color: inherit !important;
 	}
 }
 
@@ -85,6 +86,7 @@
 		height: var(--button-height);
 		padding: 0;
 		line-height: var(--button-height);
+		color: inherit;
 		overflow: visible;
 
 		svg {
@@ -118,7 +120,7 @@
 
 %buttonFilled {
 	&:disabled {
-		--button-background: hsl(var(--button-link-color),0.15);
+		--button-background: hsl(from var(--button-link-color) h s l / 0.15);
 		--button-text-color: var(--button-link-text-color);
 		--button-shadow: none;
 	}
@@ -159,7 +161,7 @@
 	&:disabled {
 		--button-background: transparent;
 		--button-text-color: var(--button-link-text-color);
-		--button-outline: 1px solid hsl(var(--button-link-color),0.15);
+		--button-outline: 1px solid hsl(from var(--button-link-color) h s l / 0.15);
 	}
 
 	&%buttonRed {

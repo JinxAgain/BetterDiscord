@@ -180,17 +180,24 @@ body:active %drawerSizingWrapper:not(:active) {
 /* EMOJI PICKER -> HEADER -> SEARCH BAR */
 
 %emojiPickerSearchBar {
+	--input-height: 32px;
+	--input-padding: 0 6px 0 12px;
+
 	background-color: var(--input-color);
-	border-radius: 16px;
+	border-radius: var(--input-radius);
 
 	%emojiPickerSearchInner {
-		padding: 0;
+		padding: var(--input-padding) !important;
+
+		&::-webkit-scrollbar {
+			width: 0px !important;
+		}
 	}
 
 	%emojiPickerSearchInput {
-		height: 32px;
+		height: var(--input-height);
 		margin: 0;
-		padding: 0 12px;
+		padding: 0;
 	}
 }
 
@@ -211,6 +218,10 @@ body:active %drawerSizingWrapper:not(:active) {
 	%emojiPickerCategoryHeaderLabel {
 		@include remove-caps(14px);
 	}
+}
+
+%emojiPickerCategorySectionNitroLocked {
+    --emoji-category-header: hsl(from hsl(var(--premium-tier-2-purple-hsl)) h calc(s / 1.9) calc(l / 1.4) / 0.95);
 }
 
 %emojiPickerItem {
@@ -257,6 +268,11 @@ body:active %drawerSizingWrapper:not(:active) {
         color: inherit !important;
         text-transform: capitalize;
     }
+}
+
+%emojiPickerUpsellContainer {
+    background: var(--popout-color);
+    border-radius: 30px;
 }
 
 %emojiPickerUpsell {
@@ -326,6 +342,10 @@ body:active %drawerSizingWrapper:not(:active) {
 %emojiCategoryWrapper {
 	background-color: var(--attachment-color);
 
+	%emojiPickerScroller {
+		--scrollbar-width: 0;
+	}
+
 	%emojiCategoryItem,
 	%stickerCategoryItem {
 		border-radius: 50%;
@@ -378,13 +398,7 @@ body:active %drawerSizingWrapper:not(:active) {
 }
 
 %gifPickerSearchBar {
-	padding: 0 6px 0 0 !important;
-
 	--input-height: 32px;
-
-	%gifPickerSearchInput {
-		padding: 0 12px !important;
-	}
 }
 
 %gifPickerResult {
@@ -544,4 +558,12 @@ body:active %drawerSizingWrapper:not(:active) {
     %emojiSuperReactGradientUpsellWrapper {
         border-radius: var(--card-radius-big);
     }
+}
+
+/* EMOJI PICKER -> VOICE CHAT */
+
+%voiceChatEmojiPickerContainer {
+    background-color: var(--popout-color);
+    border-radius: var(--popout-radius-big);
+    box-shadow: var(--shadow-3dp);
 }

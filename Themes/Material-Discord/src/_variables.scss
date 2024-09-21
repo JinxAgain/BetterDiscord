@@ -1,6 +1,12 @@
 :root {
 	--app-font: "Google Sans";
 	--app-bg: var(--main-alt);
+	--app-watermark-one: "Material";
+	--app-watermark-two: "Discord";
+	--app-title-bar-height: 22px;
+	--app-button-min: hsl(39,100%,63%);
+	--app-button-max: hsl(143,100%,40%);
+	--app-button-close: hsl(1,100%,68%);
 
 	--accent-hue: 224;
 	--accent-saturation: 71%;
@@ -14,13 +20,16 @@
     --alert-hsl: var(--alert-hue), calc(var(--alert-saturation) * var(--saturation-factor)), var(--alert-lightness);
 	--alert-text-color: hsl(0,0%,100%);
 
-	--warning-hue: 40;
-    --warning-saturation: 86.4%;
-    --warning-lightness: 56.9%;
+	--warning-hue: 44;
+    --warning-saturation: 71%;
+    --warning-lightness: 61%;
     --warning-hsl: var(--warning-hue), calc(var(--warning-saturation) * var(--saturation-factor)), var(--warning-lightness);
 	--warning-text-color: hsl(0,0%,100%);
 
 	--success-color: hsl(153,46%,49%);
+
+	--sidebar-panel-radius-big: var(--popout-radius-big);
+    --sidebar-panel-radius-small: 4px;
 
 	--message-radius: 18px;
 	--message-padding-top: 8px;
@@ -38,6 +47,9 @@
 	--button-height: 36px;
 	--button-radius: calc(var(--button-height) / 2);
 	--button-padding: 0 24px;
+	--button-padding-has-icon-left: 0 24px 0 16px;
+	--button-padding-has-icon-right: 0 16px 0 24px;
+	--button-font-size: 14px;
 	--button-link-accent-color: var(--accent-hsl--material-you);
 	--button-link-accent-text-color: hsl(var(--accent-hsl--material-you));
 
@@ -56,7 +68,7 @@
 	--popout-radius: var(--card-radius);
 	--popout-radius-big: var(--card-radius-big);
 
-	--avatar-radius: 50%;
+	--avatar-radius: 24px;
 	--channel-radius: 21px;
 
 	--spotify-color: hsl(141,73%,42%);
@@ -81,15 +93,13 @@
 	--scrollbar-width: 10px;
 	--scrollbar-thin-width: 6px;
 
-	--window-title-bar: 22px;
-	--window-button-min: hsl(39,100%,63%);
-	--window-button-max: hsl(143,100%,40%);
-	--window-button-close: hsl(1,100%,68%);
-
 	--code-font: Consolas,Andale Mono WT,Andale Mono,Lucida Console,Lucida Sans Typewriter,DejaVu Sans Mono,Bitstream Vera Sans Mono,Liberation Mono,Nimbus Mono L,Monaco,Courier New,Courier,monospace;
 }
 
 %themeDark {
+	--app-button-active: hsl(0,0%,100%,0.1);
+	--app-button-inactive: hsl(0,0%,100%,0.05);
+
 	--main-color: hsl(225,8%,9%);
 	--main-alt: hsl(220,9%,6%);
 
@@ -150,7 +160,7 @@
 	--activity-card-color--active: hsl(0,0%,100%,0.07);
 	--activity-card-color--inset: hsl(0,0%,100%,0.05);
 
-	--button-link-color: 0,0%,100%;
+	--button-link-color: hsl(0,0%,100%);
 	--button-link-text-color: hsl(0,0%,100%);
 	--button-border-color: hsl(0,0%,27%);
 
@@ -165,14 +175,14 @@
 
 	--scrollbar-color: 255,255,255;
 
-	--window-button: hsl(0,0%,100%,0.1);
-	--window-button-inactive: hsl(0,0%,100%,0.05);
-
 	--text-brand: hsl(var(--accent-hsl));
 	--text-link: hsl(var(--accent-hsl));
 }
 
 %themeLight {
+	--app-button-active: hsl(0,0%,0%,0.2);
+	--app-button-inactive: hsl(0,0%,0%,0.1);
+
 	--main-color: hsl(0,0%,98%);
 	--main-alt: hsl(0,0%,91%);
 
@@ -235,7 +245,7 @@
 	--activity-card-color--active: hsl(0,0%,0%,0.125);
 	--activity-card-color--inset: hsl(0,0%,100%,0.685);
 
-	--button-link-color: 0,0%,0%;
+	--button-link-color: hsl(0,0%,0%);
 	--button-link-text-color: hsl(0,0%,20%);
 	--button-border-color: hsl(0,0%,80%);
 
@@ -248,9 +258,6 @@
 	--md-ripple-color: 0,0%,0%;
 
 	--scrollbar-color: 0,0,0;
-
-	--window-button: hsl(0,0%,0%,0.2);
-	--window-button-inactive: hsl(0,0%,0%,0.1);
 
 	--text-brand: hsl(var(--accent-hsl));
 	--text-link: hsl(var(--accent-hsl));

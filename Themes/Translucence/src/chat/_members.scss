@@ -35,4 +35,26 @@
         background-color: var(--accent-text-color);
         color:  hsl(var(--accent-hsl));
     }
+
+    %botText {
+        text-shadow: none;
+    }
+
+    svg {
+        filter: none !important;
+    }
+
+    path {
+        fill: var(--accent-text-color);
+    }
+}
+
+/* MEMBERS LIST -> ACTIVITIES */
+
+%memberActivityContainer {
+    background-color: var(--background-modifier-hover);
+
+    &:hover {
+        background-color: var(--background-modifier-active);
+    }
 }
