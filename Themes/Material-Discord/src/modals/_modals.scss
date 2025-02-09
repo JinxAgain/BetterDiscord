@@ -26,6 +26,11 @@
         }
     }
 
+    %modalRootBg {
+        background-color: var(--popout-color);
+        border-radius: var(--popout-radius-big);
+    }
+
     %modalHeader {
         margin: 0;
         padding: 24px 24px 16px;
@@ -38,6 +43,7 @@
         }
 
         %headingLgSemibold,
+        %headingLgBold,
         %headlingXlSemibold,
         %headlingXlExtrabold,
         %textMdSemibold,
@@ -45,6 +51,10 @@
         %titleH2 {
             font-size: 22px;
             font-weight: 400;
+        }
+
+        %headingLgBold {
+            padding-top: 0;
         }
 
         %modalTitle {
@@ -146,6 +156,10 @@
 		background-color: transparent !important;
 		border-radius: 0 0 var(--popout-radius-big) var(--popout-radius-big);
 		box-shadow: none !important;
+
+        %authorizeFooter {
+            padding: 0;
+        }
 
         > %flexDirectionRow {
             gap: 16px;

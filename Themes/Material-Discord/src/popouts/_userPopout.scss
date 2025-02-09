@@ -48,9 +48,9 @@
 	}
 
 	%buttonFilled {
-		--button-background: var(--profile-gradient-button-color);
-        --button-text-color: var(--white-500);
-        --accent-button-action: var(--white-500);
+		--button-background: var(--profile-gradient-button-color) !important;
+        --button-text-color: var(--white-500) !important;
+        --accent-button-action: var(--white-500) !important;
 	}
 
 	%userProfileModalConnectedAccounts {
@@ -130,6 +130,20 @@
     width: var(--button-height);
     height: var(--button-height);
     padding: 0;
+}
+
+%userProfileBody {
+    --scrollbar-width: var(--scrollbar-thin-width);
+
+    max-height: 60vh;
+    padding-right: calc(16px - var(--scrollbar-width)) !important;
+}
+
+%userProfileUpsellContainer {
+    &,
+    > div {
+        border-radius: calc(var(--popout-radius-big) / 1.5);
+    }
 }
 
 %userProfileUsernameRow {
@@ -334,7 +348,7 @@
 
 %userProfileMessageInner {
     background-color: var(--input-color) !important;
-    border-radius: var(--input-radius);
+    border-radius: var(--input-radius) !important;
 
     %textArea {
         min-height: var(--input-height);

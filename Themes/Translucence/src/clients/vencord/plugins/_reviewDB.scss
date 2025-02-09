@@ -4,30 +4,26 @@
  *
  */
 
-%userProfileOuterThemed {
-    %reviewDBView {
-        %messagesWrapper {
-            --message-color: var(--profile-body-background-hover);
-            --message-color-hover: var(--profile-body-background-hover);
-        }
+%reviewDBModalFooter {
+    > div {
+        margin: 16px;
+    }
 
-        %formText {
-            background-color: var(--profile-body-background-hover);
-        }
-
-        %input {
-            --textarea-background: var(--profile-body-background-color) !important;
-        }
+    %reviewDBReview {
+        margin-top: 0 !important;
+        margin-right: 0 !important;
     }
 }
 
-%reviewDBView {
-    %messagesWrapper {
-        --message-color: var(--popout-color);
-        --message-color-hover: var(--popout-color);
+%reviewDBReview {
+    --message-color: var(--card-color);
+    --message-color-hover: var(--card-color-hover);
 
-        margin-top: 4px !important;
-        margin-left: 52px !important;
+    margin-top: 4px !important;
+    margin-left: 52px !important;
+
+    &:hover {
+        background-color: var(--message-color-hover) !important;
     }
 
     %avatarLarge {
