@@ -1,41 +1,20 @@
+@use '../mixins' as *;
+
 /*
  *
- *  VISUAL REFRESH
+ *  BETA - VISUAL REFRESH
  *
  */
 
-.visual-refresh {
-    @extend %visualRefresh !optional;
-}
-.bar_c38106 {
-    @extend %bar !optional;
-}
-.leading_c38106 {
-    @extend %barLeading !optional;
-}
-.title_c38106 {
-    @extend %barTitleContainer !optional;
-}
-.title__85643 {
-    @extend %barTitle !optional;
-}
-.guildIcon__85643 {
-    @extend %barGuildIcon !optional;
-}
-.sidebarList_c48ade {
-    @extend %sidebarList !optional;
-}
-.page_c48ade {
-    @extend %chatPage !optional;
-}
-
 %themeDark {
     &%themeDarker {
-        --ui-darkness-modifier: 0.65;
+        --text-lightness-modifier: 1.75;
+        --ui-darkness-modifier: 0.55;
     }
 
     &%themeMidnight {
-        --ui-darkness-modifier: 0.325;
+        --text-lightness-modifier: 9.8;
+        --ui-darkness-modifier: 0.10;
     }
 }
 
@@ -46,11 +25,6 @@
 
     %bar {
         padding-left: 0;
-
-        /*%barTitleContainer {
-            justify-content: flex-start;
-            align-items: flex-start;
-        }*/
 
         %barLeading {
             padding-left: 8px;
@@ -75,11 +49,12 @@
             &:after {
                 content: var(--app-watermark-two);
             }
-        }
 
-        %barGuildIcon,
-        %textSmMedium {
-            display: none;
+            %barGuildIcon,
+            %textSmMedium,
+            svg {
+                display: none;
+            }
         }
 
         %headerBarIconBadge {
@@ -97,10 +72,44 @@
         background-color: transparent;
     }
 
+    %friendsItem {
+        &:hover {
+            background-color: var(--menu-item-hover);
+        }
+
+        &%friendsItemActive {
+            background-color: var(--menu-item-select);
+        }
+    }
+
     /* active now */
 
     %activeNowOuterCard {
         background-color: var(--activity-card-color);
+    }
+
+    %activeNowCardSection {
+        border: none;
+    }
+
+    /* server list */
+
+    %guildsWrapper {
+        //margin-bottom: 0;
+    }
+
+    %guildExpandedFolderBackground {
+        border-radius: var(--avatar-radius);
+        border: none;
+    }
+
+    %guildFolderExpandedIconWrapper {
+        border-radius: calc(var(--avatar-radius) / 1.2);
+    }
+
+    %guildDiscoverFooter {
+        width: calc(100% - 1px);
+        background-color: var(--main-alt);
     }
 
     /* channels and private sidebar */
@@ -132,6 +141,11 @@
         }
     }
 
+    %bannerAnimatedContainer {
+        background-color: var(--chat-color);
+        border-bottom: none;
+    }
+
     %channelUserLimitWrapper {
         border: none;
 
@@ -144,13 +158,34 @@
             width: auto;
             padding: 0 6px;
             background-color: var(--sidebar-panel-color);
+
+            &:after {
+                display: none;
+            }
         }
     }
 
+    %channelLink {
+        %channelContent,
+        %channelLinkTop {
+            min-height: inherit;
+        }
+    }
+
+    %channelUnreadPillBottom {
+        bottom: calc(var(--custom-app-panels-height,0) + var(--spacing-12));
+    }
+
     %panels {
-        width: calc(100% - 94px);
+        width: calc(100% - 20px);
+        left: var(--spacing-12);
+        bottom: var(--spacing-12);
+        margin: 0;
+
+        /*width: calc(100% - 94px);
         left: 72px;
-        bottom: 0;
+        bottom: 0;*/
+
         border-radius: var(--sidebar-panel-radius-big);
         border: none;
         box-shadow: none;
@@ -176,6 +211,11 @@
 
     %accountPanel {
         margin-left: 0;
+    }
+
+    %accountPanelContent {
+        min-height: 100%;
+        padding: 0 8px;
     }
 
     /* collapsed sidebar */
@@ -218,6 +258,14 @@
         box-shadow: var(--shadow-ledge);
     }
 
+    %headerBar {
+        border-top: none;
+
+        &%headerBarTransparent {
+            box-shadow: none;
+        }
+    }
+
     %channelsHeaderContainer {
         background-color: var(--chat-color);
 
@@ -227,10 +275,6 @@
                 border-bottom: none;
             }
         }
-    }
-
-    %chatSearchBar {
-        border: none;
     }
 
     %summaryTopicsPillContainer {
@@ -251,6 +295,10 @@
         &[data-has-border=true] {
             border-top: none;
         }
+
+        &%threadSidebarOpen {
+            border-right: none;
+        }
     }
 
     %newMessagesBar {
@@ -268,6 +316,59 @@
             padding: 9px 10px;
             background-color: hsl(var(--accent-hsl--material-you));
             border-radius: 18px;
+        }
+    }
+
+    %jumpToPresentBar {
+        height: 56px;
+        min-width: 80px;
+        gap: 8px;
+        left: unset;
+        right: 16px;
+        margin: 0;
+        padding: 16px 16px 16px 12px;
+        border-radius: calc(var(--button-radius) / 1.125);
+        border: none;
+        box-shadow: var(--shadow-1dp);
+        z-index: 3;
+
+        &:active {
+            margin: 0 auto !important;
+        }
+
+        &:before {
+            position: relative;
+            width: 24px;
+    		height: 24px;
+            left: unset;
+            bottom: 0;
+    		right: 0;
+            box-sizing: border-box;
+            @include add-icon(var(--accent-text-color--material-you), expand, solid);
+            mask-size: 150%;
+            transform: none;
+        }
+
+        %jumpToPresentBarButtonBase {
+            display: none;
+        }
+
+        %button {
+            --button-height: 24px;
+
+            padding: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        %spinner {
+            width: 100%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            padding: 0;
         }
     }
 
@@ -317,12 +418,15 @@
 
     %channelTextAreaStackedBars {
         background-color: var(--main-textarea-color);
-        border-top-left-radius: var(--main-textarea-radius);
-        border-top-right-radius: var(--main-textarea-radius);
 
         &:not(:last-child) {
             border-bottom: none;
         }
+    }
+
+    %channelAccessoryBar {
+        margin: 0 12px;
+        border-top-color: var(--separator-color);
     }
 
     %channelAtachmentArea {
@@ -346,7 +450,172 @@
         }
     }
 
+    %pollContainer {
+        background-color: var(--attachment-color);
+        border: none;
+    }
+
+    %pollEndedContainer {
+        background-color: var(--attachment-color);
+        border-radius: var(--media-radius);
+        border: none;
+    }
+
+    /* chat area search */
+
+    %chatSearch {
+        --input-height: 32px;
+
+        %chatSearchBar {
+            padding: 0;
+            border: none;
+
+            %chatSearchRoot {
+                padding: 0 0 0 8px;
+
+                %chatSearchPlaceholder {
+                    height: var(--input-height);
+                    line-height: var(--input-height);
+                    padding-bottom: 0;
+                }
+
+                %chatSearchContent {
+                    padding-bottom: 0;
+                    line-height: var(--input-height);
+                }
+            }
+        }
+
+        %chatSearchContainer {
+            height: var(--input-height);
+        }
+    }
+
+    /* forum */
+
+    %forumContainer {
+        background-color: var(--chat-color);
+    }
+
+    %forumHeader {
+        background-color: var(--input-color);
+        border: none;
+    }
+
+    %forumHeaderMatchingPostsRow {
+        background-color: var(--input-color);
+        border: none;
+    }
+
+    %postPill {
+        border: none;
+    }
+
+    %postThreadButtonContainer {
+        background-color: var(--card-color-filled);
+    }
+
+    %postContainer {
+        background-color: var(--card-color-filled);
+
+        &:hover {
+            background-color: var(--card-color-hover);
+        }
+    }
+
+    %threadResizeHandle {
+        background-color: var(--main-alt);
+    }
+
+    %threadContainer {
+        background-color: var(--chat-color);
+        border: none;
+    }
+
+    /* messages */
+
+    %message {
+        %channelTextArea {
+            margin-bottom: 4px;
+            background-color: var(--input-color-alt);
+            border-radius: var(--main-textarea-radius);
+            border: none;
+            box-shadow: none;
+
+            %channelTextAreaInner {
+                padding-left: 0;
+            }
+        }
+
+        %channelAccessoryBar {
+            margin: 0 12px;
+            padding: 0 4px;
+            border-color: var(--separator-color);
+        }
+    }
+
+    /* message attachments */
+
+    %threadEmbed {
+        background-color: var(--attachment-color);
+        border: none;
+    }
+
+    /* emoji picker */
+
+    %emojiContentWrapper {
+        background-color: var(--popout-color);
+        border-radius: var(--popout-radius-big);
+        border: none;
+        box-shadow: var(--shadow-3dp);
+    }
+
+    %emojiPicker {
+        background-color: var(--popout-color);
+    }
+
+    %emojiPickerNavGif,
+    %emojiPickerNavSticker,
+    %emojiPickerNavEmoji {
+        background-color: transparent;
+        border-bottom-color: var(--separator-color);
+
+        %searchIconLayout {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    %emojiPickerCategoryHeaderWrapper {
+        background-color: var(--emoji-category-header);
+    }
+
+    %emojiPickerInspector {
+        background-color: var(--popout-color);
+        border-top-color: var(--separator-color);
+    }
+
+    %emojiCategoryWrapper {
+        top: 54px;
+        background-color: var(--attachment-color);
+    }
+
+    %emojiPickerHasTabWrapper {
+        %emojiCategoryWrapper {
+            top: 50px;
+        }
+    }
+
+    %emojiStandardStickerShortcut {
+        background-color: var(--popout-color);
+    }
+
     /* members list */
+
+    %membersWrap {
+        background-color: transparent;
+        border-left: none;
+    }
 
     %membersContainer {
         border-left: none;
@@ -354,36 +623,115 @@
 
     %memberActivityContainer {
         background-color: var(--card-color-filled);
+        border: none;
+    }
+
+    %member {
+        max-width: 100%;
+    }
+
+    %memberInner {
+        height: 100%;
     }
 
     /* app launcher button in main textbox */
 
     %channelAppLauncher {
-        width: 36px;
+        width: var(--space-32);
         height: auto;
         margin: 0;
         padding: 0;
 
         %channelAppLauncherButton {
-            background-color: var(--button-link-color);
+            background-color: transparent;
+
+            &:hover {
+                background-color: transparent;
+            }
         }
     }
 
-    /* server list */
+    /* modals */
 
-    %guildsWrapper {
-        margin-bottom: 0;
+    %modalRoot {
+        border: none;
     }
 
-    %guildDiscoverFooter {
-        width: calc(100% - 1px);
+    /* search results */
+
+    %searchResultsWrap {
         background-color: var(--main-alt);
+        border: none;
     }
 
-    /* settings sidebar */
+    %searchHeader {
+        padding: 0 16px;
+        border-bottom: 1px solid var(--separator-color);
+    }
 
-    %settingsSidebarScroller {
-        background-color: var(--main-alt);
+    %searchResult {
+        background-color: transparent;
+        border: none;
+    }
+
+    /* inbox */
+
+    %messagesPopoutChannelHeader {
+        background-color: var(--message-color-alt);
+        border-bottom: none;
+    }
+
+    %recentMentionsMessagesContainer {
+        border: none;
+    }
+
+    /* pinned messages popout */
+
+    %messagesPopoutWrap {
+        background-color: var(--popout-color);
+    }
+
+    %messagesPopoutHeader {
+        background-color: transparent;
+        border-bottom: none;
+    }
+
+    %messagesPopoutContentContainer {
+        background-color: transparent;
+    }
+
+    %messagesPopoutRow {
+        &:hover {
+            background-color: var(--menu-item-hover);
+        }
+    }
+
+    %recentMentionsPopout {
+        background-color: var(--popout-color);
+    }
+
+    %recentMentionsHeaderTabs {
+        margin: 0 -24px;
+
+        %messagesPopoutTabBar {
+            padding: 0 16px;
+        }
+    }
+
+    %unreadMessages {
+        background-color: var(--message-color-alt);
+        border: none;
+    }
+
+    /* threads popouts */
+
+    %threadsPopoutContainer {
+        background-color: var(--popout-color);
+    }
+
+    %threadsPopoutHeader {
+        background-color: transparent;
+        border-bottom: none;
     }
 
     /* inputs */
@@ -397,6 +745,8 @@
     /* select menus */
 
     %selectMenu {
+        min-height: var(--input-height);
+
         &%selectMenuFilled {
             border: none;
         }
@@ -417,6 +767,75 @@
 
         %switchSlider {
             transform: translate(8px, -50%);
+        }
+    }
+
+    /* radio button */
+
+    %radioItem {
+        border-radius: calc(var(--card-radius-big) / 1.65);
+        transition: var(--default-time) var(--default-animation) background-color, var(--default-time) var(--default-animation) color;
+
+        %radioBar {
+            &:after {
+                top: 0;
+            }
+        }
+    }
+
+    %radioItem,
+    %menuPopoutItem[role="menuitemradio"] {
+        &[aria-checked="false"] {
+            %radioIndicatorGroup {
+                background-color: var(--interactive-normal);
+                -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/radio_button_unchecked.svg);
+            }
+        }
+
+        &[aria-checked="true"] {
+            %radioIndicatorGroup {
+                background-color: hsl(var(--accent-hsl--material-you));
+                -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/radio_button_checked.svg);
+            }
+        }
+    }
+
+    %menuPopoutItem[role="menuitemradio"] {
+        %radioIndicatorGroup {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    %radioIndicatorGroup {
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-mask-repeat: no-repeat;
+        mask-size: 100%;
+
+        %radioIndicator {
+            display: none;
+        }
+    }
+
+    /* tab bar */
+
+    %tabBar {
+        %tabBarItem {
+            margin: 0;
+
+            &:after {
+                display: none;
+            }
+
+            &%tabBarItemSelected {
+                &:after {
+                    display: block;
+                    top: unset;
+                }
+            }
         }
     }
 
@@ -446,6 +865,197 @@
     	%settingsSide {
     		> div:not([class])[style="margin-bottom: 8px;"] {
                 top: 0;
+            }
+        }
+    }
+
+    /* settings sidebar */
+
+    %settingsSidebarScroller {
+        background-color: var(--main-alt);
+    }
+
+    /* voice/video chat */
+
+    %callWrapper {
+        background-color: var(--chat-color);
+    }
+
+    %callGradientContainer {
+        border-radius: calc(var(--card-radius-big) / 1.5);
+    }
+
+    /* channels & roles */
+
+    %pageBodyHeader,
+    %chatContentWrapper {
+        background-color: transparent !important;
+    }
+
+    %chatContentWrapper {
+        %channelsAndRolesTabBar {
+            margin: 32px 46px 0 16px;
+        }
+    }
+
+    %channelsAndRolesContainer {
+        %channelsAndRolesScroller {
+            padding-left: 16px;
+        }
+    }
+
+    %pageBody {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    %browseChannelsHeader {
+        margin: 0 46px 0 16px;
+    }
+
+    %browseChannelsScrollerInner {
+        padding: 0 36px 32px 16px;
+    }
+
+    %browseChannelsChannelRow {
+        background-color: var(--card-color-filled);
+        border: none;
+
+        &:hover:not(%browseChannelsChannelDisabled) {
+            background-color: var(--card-color-filled);
+        }
+    }
+
+    %channelsAndRolesPrompt {
+        background-color: var(--card-color-filled);
+        border: none;
+    }
+
+    %promptOptionButtonWrapper {
+        background-color: var(--card-color-alt);
+        border: none;
+
+        &:hover {
+            background-color: var(--card-color-hover);
+        }
+
+        &%promptOptionButtonWrapperSelected {
+            background-color: var(--card-color-active);
+        }
+    }
+
+    /* members tab */
+
+    %membersPageMainTableContainer {
+        background-color: transparent;
+        border: none;
+    }
+
+    /* discover */
+
+    %discoverSidebar {
+        background-color: var(--chat-color);
+    }
+
+    %discoverSidebarHeader {
+        height: 52px;
+    }
+
+    %discoverContentContainer {
+        border-top: none;
+    }
+
+    %discoverHeaderBar {
+        height: 52px;
+    }
+
+    %discoverHeaderBarTabsContainer {
+        height: inherit;
+
+        %tabs {
+            height: inherit;
+            border-bottom: none;
+        }
+    }
+
+    %discoverScroller {
+        background-color: var(--chat-color);
+    }
+
+    /* discover apps */
+
+    %appCard {
+        border: none !important;
+    }
+
+    /* discover quests */
+
+    %questsHeaderContainer {
+        %discoverHeaderBar {
+            height: 52px;
+        }
+    }
+
+    %questCardsContainer {
+        padding: 24px 32px;
+    }
+
+    %questCard {
+        border: none;
+    }
+
+    %questCardContentContainer {
+        background-color: var(--card-color-filled);
+
+        %questCardRewardDescriptionContainer {
+            background-color: transparent;
+        }
+
+        %questCardFooterContainer {
+            border-top: none;
+        }
+    }
+
+    /* ui density */
+
+    &%densityCozy {
+        %channelLink {
+            min-height: 40px;
+        }
+
+        %accountPanel {
+            height: 56px !important;
+        }
+
+        %members {
+            --channel-radius: 25px;
+
+            %listItem {
+                height: 50px;
+            }
+        }
+
+        %settingsSidebar {
+            %settingsSideItem {
+                height: 40px;
+            }
+        }
+    }
+
+    &%densityCompact {
+        %channelLink {
+            min-height: 34px;
+        }
+
+        %accountPanel {
+            height: 44px !important;
+        }
+
+        %members {
+            --channel-radius: 21px;
+
+            %listItem {
+                height: 42px;
             }
         }
     }

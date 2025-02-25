@@ -135,9 +135,9 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
   content: " ";
   width: 18px;
   height: 18px;
-  margin-right: 12px;
   background-color: currentColor;
   -webkit-mask-repeat: no-repeat;
+  mask-size: 100%;
 }
 .menu_c1e9c4 #user-settings-cog-Accessibility--input.item_c1e9c4, .menu_c1e9c4 #user-settings-cog-Voice___Video--input.item_c1e9c4, .menu_c1e9c4 #user-settings-cog-Voice___Video--output.item_c1e9c4, .menu_c1e9c4 #user-settings-cog-Experiments--experiments-search.item_c1e9c4 {
   display: block;
@@ -147,13 +147,6 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 }
 .menu_c1e9c4 #user-context-user-volume.item_c1e9c4 {
   display: block;
-}
-.menu_c1e9c4 #account-edit-custom-status.item_c1e9c4 {
-  flex-direction: row;
-}
-.menu_c1e9c4 #account-edit-custom-status.item_c1e9c4 .iconContainerLeft_c1e9c4 {
-  margin-left: 0;
-  margin-right: 12px;
 }
 .menu_c1e9c4 #gdm-context-change-icon.item_c1e9c4 {
   min-height: 36px;
@@ -224,6 +217,9 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 #user-context-manage-integration.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/settings.svg);
 }
+.menu_c1e9c4 #user-context-ignore.item_c1e9c4:after {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/remove_circle.svg);
+}
 .menu_c1e9c4 #user-context-block.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/block.svg);
 }
@@ -245,11 +241,17 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 #user-context-removetimeout.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/timer_off.svg);
 }
+.menu_c1e9c4 #user-context-mod-view.item_c1e9c4:after {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/visibility.svg);
+}
+.menu_c1e9c4 #user-context-verify.item_c1e9c4:after {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/verified_user.svg);
+}
 .menu_c1e9c4 #user-context-kick.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/remove_circle.svg);
 }
 .menu_c1e9c4 #user-context-ban.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/hammer.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/hardware.svg);
 }
 .menu_c1e9c4 #user-context-close-dm.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/cancel.svg);
@@ -384,7 +386,7 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/open_in_new.svg);
 }
 .menu_c1e9c4 #image-context-imageutilities-copy-file.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/image_copy.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/file_copy.svg);
 }
 .menu_c1e9c4 #textarea-context-add-to-dictionary.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/library_add.svg);
@@ -441,7 +443,7 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/add_circle.svg);
 }
 .menu_c1e9c4 #guild-context-server-lockdown.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/shield_lock_open.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/shield_lock.svg);
 }
 .menu_c1e9c4 #channel-context-mark-channel-read.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/visibility.svg);
@@ -516,25 +518,28 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/block.svg);
 }
 .menu_c1e9c4 #user-profile-overflow-menu-report-user.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/report_problem.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/report.svg);
 }
 .menu_c1e9c4 #manage-streams-report-stream-problem.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/alert.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/warning.svg);
 }
 .menu_c1e9c4 #clips-context-clips-settings.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/settings.svg);
 }
 .menu_c1e9c4 #user-settings-cog-My_Account.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/settings.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/person.svg);
 }
 .menu_c1e9c4 #user-settings-cog-Profile_Customization.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/edit.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/account_circle.svg);
 }
-.menu_c1e9c4 #user-settings-cog-Privacy___Safety.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/security.svg);
+.menu_c1e9c4 #user-settings-cog-Content___Social.item_c1e9c4:after {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/assignment.svg);
+}
+.menu_c1e9c4 #user-settings-cog-Data___Privacy.item_c1e9c4:after {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/shield_lock.svg);
 }
 .menu_c1e9c4 #user-settings-cog-Family_Center.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/shield_account.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/family.svg);
 }
 .menu_c1e9c4 #user-settings-cog-Authorized_Apps.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/apps.svg);
@@ -576,7 +581,7 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/space_bar.svg);
 }
 .menu_c1e9c4 #user-settings-cog-Language.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/translate.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/language.svg);
 }
 .menu_c1e9c4 #user-settings-cog-Windows.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/windows.svg);
@@ -591,13 +596,13 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/verified_user.svg);
 }
 .menu_c1e9c4 #user-settings-cog-Game_Activity.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/gamepad.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/stadia_controller.svg);
 }
 .menu_c1e9c4 #user-settings-cog-Overlay.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/picture_in_picture.svg);
 }
 .menu_c1e9c4 #user-settings-cog-changelog.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/list.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/checklist.svg);
 }
 .menu_c1e9c4 #user-settings-cog-merchandise.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/storefront.svg);
@@ -630,7 +635,7 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/cloud.svg);
 }
 .menu_c1e9c4 #user-settings-cog-VencordSettingsSync.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/cloud_refresh.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/cloud_done.svg);
 }
 .menu_c1e9c4 [id="user-context-Start Event"].item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/play.svg);
@@ -659,8 +664,8 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 #message-copy.item_c1e9c4 .hintContainer_c1e9c4, .menu_c1e9c4 [id*=textarea-context-].item_c1e9c4 .hintContainer_c1e9c4 {
   width: 18px;
   height: 18px;
-  margin-left: 0;
-  margin-right: 12px;
+  /*margin-left: 0;
+  margin-right: 12px;*/
   font-size: 0;
 }
 .menu_c1e9c4 #message-copy.item_c1e9c4 .hintContainer_c1e9c4 {
@@ -688,12 +693,9 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
   content: " ";
   width: 18px;
   height: 18px;
-  margin-right: 12px;
   background-color: currentColor;
   -webkit-mask-repeat: no-repeat;
-}
-.menu_c1e9c4 [aria-haspopup=true]#status-picker-switch-account.item_c1e9c4:before, .menu_c1e9c4 [aria-haspopup=true]#account-status-picker.item_c1e9c4:before, .menu_c1e9c4 [aria-haspopup=true]#account-switch-account.item_c1e9c4:before, .menu_c1e9c4 [aria-haspopup=true]#status-status-picker.item_c1e9c4:before, .menu_c1e9c4 [aria-haspopup=true]#status-status-picker--quiet-mode.item_c1e9c4:before {
-  display: none;
+  mask-size: 100%;
 }
 .menu_c1e9c4 [aria-haspopup=true][id*=image-context-commands-popout].item_c1e9c4:before {
   margin-right: 0;
@@ -746,9 +748,6 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 [aria-haspopup=true]#message-apps.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/apps.svg);
 }
-.menu_c1e9c4 [aria-haspopup=true]#message-actions-apps.item_c1e9c4:before {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/apps.svg);
-}
 .menu_c1e9c4 [aria-haspopup=true]#message-guild-feed-feature.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/feature.svg);
 }
@@ -758,14 +757,17 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 [aria-haspopup=true]#message-copy-message.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/content_copy.svg);
 }
-.menu_c1e9c4 [aria-haspopup=true]#message-actions-remove-emoji-reactions.item_c1e9c4:before {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/remove_circle.svg);
-}
 .menu_c1e9c4 [aria-haspopup=true]#message-remove-emoji-reactions.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/remove_circle.svg);
 }
 .menu_c1e9c4 [aria-haspopup=true]#message-save-for-later.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/bookmark.svg);
+}
+.menu_c1e9c4 [aria-haspopup=true]#message-actions-apps.item_c1e9c4:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/apps.svg);
+}
+.menu_c1e9c4 [aria-haspopup=true]#message-actions-add-reaction.item_c1e9c4:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/emoji.svg);
 }
 .menu_c1e9c4 [aria-haspopup=true]#message-actions-add-reaction-0.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/emoji.svg);
@@ -773,8 +775,14 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 [aria-haspopup=true]#message-actions-add-reaction-1.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/burst_reaction.svg);
 }
+.menu_c1e9c4 [aria-haspopup=true]#message-actions-remove-emoji-reactions.item_c1e9c4:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/remove_circle.svg);
+}
 .menu_c1e9c4 [aria-haspopup=true]#message-actions-guild-feed-feature.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/feature.svg);
+}
+.menu_c1e9c4 [aria-haspopup=true]#message-actions-save-for-later.item_c1e9c4:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/bookmark.svg);
 }
 .menu_c1e9c4 [aria-haspopup=true]#image-context-imageutilities-download-file-as.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/save.svg);
@@ -821,6 +829,9 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 [aria-haspopup=true]#channel-context-favorite-channel.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/favorite.svg);
 }
+.menu_c1e9c4 [aria-haspopup=true]#user-settings-cog-Games.item_c1e9c4:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/stadia_controller.svg);
+}
 .menu_c1e9c4 [aria-haspopup=true]#user-settings-cog-Appearance.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/chat.svg);
 }
@@ -851,25 +862,6 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 [aria-haspopup=true][id="user-context-Add to Calendar"].item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/add_circle.svg);
   -webkit-mask-repeat: no-repeat;
-}
-.menu_c1e9c4 [aria-haspopup=true].item_c1e9c4 .iconContainer_c1e9c4,
-.menu_c1e9c4 [aria-haspopup=true].item_c1e9c4 .imageContainer_d90b3d {
-  margin-right: 0;
-  margin-left: 12px;
-}
-.menu_c1e9c4 .listItems_dcade6 .iconContainer_c1e9c4 {
-  margin-right: 12px;
-  margin-left: 0;
-}
-.menu_c1e9c4 #account-status-picker .iconContainerLeft_c1e9c4,
-.menu_c1e9c4 #account-switch-account .iconContainerLeft_c1e9c4,
-.menu_c1e9c4 #status-status-picker .iconContainerLeft_c1e9c4 {
-  margin-right: 12px;
-  margin-left: 0;
-}
-.menu_c1e9c4 #status-edit-custom-status .hintContainer_c1e9c4 {
-  margin-left: 0;
-  margin-right: 12px;
 }
 .menu_c1e9c4 .submenu_c1e9c4 .item_c1e9c4:before {
   display: none;
@@ -1221,7 +1213,7 @@ path[d="M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0Zm-9.5-4.75a1.25 1.25 0 1 1-2.5 
   transform: translate(0, 24px) scale(0.025);
 }
 path[d="M12 2a1 1 0 0 1 1 1v10.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V3a1 1 0 0 1 1-1ZM3 20a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2H3Z"] {
-  d: path("M480-120q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-480q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q82 0 155.5 35T760-706v-94h80v240H600v-80h110q-41-56-101-88t-129-32q-117 0-198.5 81.5T200-480q0 117 81.5 198.5T480-200q105 0 183.5-68T756-440h82q-15 137-117.5 228.5T480-120Zm112-192L440-464v-216h80v184l128 128-56 56Z");
+  d: path("M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z");
   transform: translate(0, 24px) scale(0.025);
 }
 
@@ -1351,23 +1343,22 @@ path[d="M3 1a1 1 0 0 1 1 1v.82l8.67-1.45A2 2 0 0 1 15 3.35v1.47l5.67-.95A2 2 0 0
  */
 .sidebar__23e6b [data-tab-id].item_b3f026 {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   padding-left: 12px;
+  align-items: center;
 }
 .sidebar__23e6b [data-tab-id].item_b3f026:before {
   position: relative;
   content: " ";
   width: 20px;
   height: 20px;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: var(--text-normal);
+  background-color: var(--interactive-normal);
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/settings.svg);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
+  mask-size: 100%;
   opacity: 0.8;
 }
 .sidebar__23e6b [data-tab-id].item_b3f026 img {
@@ -1382,19 +1373,19 @@ path[d="M3 1a1 1 0 0 1 1 1v.82l8.67-1.45A2 2 0 0 1 15 3.35v1.47l5.67-.95A2 2 0 0
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/person.svg);
 }
 .sidebar__23e6b [data-tab-id=Games].item_b3f026:before {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/gamepad.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/stadia_controller.svg);
 }
 .sidebar__23e6b [data-tab-id="Profile Customization"].item_b3f026:before {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/person.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/account_circle.svg);
 }
 .sidebar__23e6b [data-tab-id="Content & Social"].item_b3f026:before {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/people.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/assignment.svg);
 }
 .sidebar__23e6b [data-tab-id="Data & Privacy"].item_b3f026:before {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/shield_lock_open.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/shield_lock.svg);
 }
 .sidebar__23e6b [data-tab-id="Family Center"].item_b3f026:before {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/people.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/family.svg);
 }
 .sidebar__23e6b [data-tab-id="Authorized Apps"].item_b3f026:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/apps.svg);
@@ -1439,7 +1430,7 @@ path[d="M3 1a1 1 0 0 1 1 1v.82l8.67-1.45A2 2 0 0 1 15 3.35v1.47l5.67-.95A2 2 0 0
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/space_bar.svg);
 }
 .sidebar__23e6b [data-tab-id=Language].item_b3f026:before {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/translate.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/language.svg);
 }
 .sidebar__23e6b [data-tab-id=Windows].item_b3f026:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/windows.svg);
@@ -1475,7 +1466,7 @@ path[d="M3 1a1 1 0 0 1 1 1v.82l8.67-1.45A2 2 0 0 1 15 3.35v1.47l5.67-.95A2 2 0 0
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/themes.svg);
 }
 .sidebar__23e6b [data-tab-id=changelog].item_b3f026:before {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/list.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/checklist.svg);
 }
 .sidebar__23e6b [data-tab-id=merchandise].item_b3f026:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/casino.svg);
@@ -1523,7 +1514,7 @@ path[d="M3 1a1 1 0 0 1 1 1v.82l8.67-1.45A2 2 0 0 1 15 3.35v1.47l5.67-.95A2 2 0 0
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/apps.svg);
 }
 .sidebar__23e6b [data-tab-id=SAFETY].item_b3f026:before {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/shield_lock_open.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/shield_lock.svg);
 }
 .sidebar__23e6b [data-tab-id=AUDIT_LOG].item_b3f026:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/audit_log.svg);

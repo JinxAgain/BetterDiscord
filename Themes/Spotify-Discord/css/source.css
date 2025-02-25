@@ -222,6 +222,10 @@ body:not(:has(:is(.container_6sXIoE, #vc-spotify-player))) .sidebar_c48ade {
   transition: var(--default-time) var(--default-animation) margin-bottom;
 }
 
+.content__37e49 {
+  background-color: inherit !important;
+}
+
 .button__67645 {
   border-radius: 16px;
 }
@@ -4539,7 +4543,7 @@ body:not(:has(:is(.container_6sXIoE, #vc-spotify-player))) .wrapper_ef3116 {
   padding-right: 0;
 }
 
-.scroller_ff90b2 {
+.scroller__53543 {
   background-color: transparent;
 }
 
@@ -4727,6 +4731,22 @@ body:not(:has(:is(.container_6sXIoE, #vc-spotify-player))) .wrapper_ef3116 {
 }
 .visual-refresh .interactive_bf1984 {
   background-color: var(--card-color);
+}
+.visual-refresh .standardSidebarView__23e6b {
+  margin: var(--app-card-margin);
+  gap: var(--app-card-margin);
+  background-color: var(--app-background);
+}
+.visual-refresh .sidebarRegion__23e6b {
+  width: auto;
+  flex: 1 0 1;
+  margin: 0;
+}
+.visual-refresh .sidebar__23e6b {
+  padding: 60px var(--custom-standard-sidebar-view-sidebar-content-scrollbar-padding) 60px 8px;
+}
+.visual-refresh .contentRegion__23e6b {
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

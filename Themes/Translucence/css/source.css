@@ -312,6 +312,7 @@ body {
 
 .container_e131a9,
 .container__37e49,
+.content__37e49,
 .activityPanel_c48ade {
   background: transparent !important;
 }
@@ -386,6 +387,7 @@ body {
 }
 
 .searchBar__35e86 {
+  height: 56px;
   box-shadow: var(--popout-header-shadow);
 }
 .searchBar__35e86 .searchBarComponent__35e86 {
@@ -2186,11 +2188,18 @@ body {
  *  ACTIVITY LIST
  *
  */
-.nowPlayingColumn__133bf {
+.nowPlayingColumn__133bf,
+.container__7d20c {
   background-color: transparent;
 }
-.nowPlayingColumn__133bf .scroller__7d20c {
+
+.scroller__7d20c {
   margin-left: 0;
+}
+
+.emptyCard__7e549 {
+  background-color: var(--card-color);
+  border-radius: var(--card-radius);
 }
 
 .interactive_bf1984 {
@@ -4790,6 +4799,13 @@ body {
   background-color: var(--server-folder-color);
 }
 
+.unreadMentionsIndicatorTop_ef3116 + .itemsContainer_ef3116 .folder__48112 {
+  background-color: var(--server-folder-color);
+}
+.unreadMentionsIndicatorTop_ef3116 + .itemsContainer_ef3116 .isExpanded__48112 .expandedFolderBackground__48112 {
+  background-color: transparent;
+}
+
 [style*="background-color: rgba(88, 101, 242, 0.4)"].folderIconWrapper__48112 {
   background-color: hsla(var(--accent-hsl), 0.4) !important;
 }
@@ -5165,18 +5181,18 @@ body {
  *  SERVER SETTINGS PERMISSIONS
  *
  */
-.settingCard_dd864e {
+.settingCard__1a4ef {
   background-color: var(--card-color);
   border-radius: var(--card-radius);
   border: none;
 }
-.settingCard_dd864e.active_dd864e {
+.settingCard__1a4ef.active_dd864e {
   background-color: var(--card-color);
   border-radius: var(--card-radius);
   border: none;
   overflow: hidden;
 }
-.settingCard_dd864e.active_dd864e .cardContent_f62fce {
+.settingCard__1a4ef.active_dd864e .cardContent_f62fce {
   box-shadow: var(--card-header-shadow);
 }
 
@@ -5998,14 +6014,6 @@ body {
  *  VISUAL REFRESH
  *
  */
-.visual-refresh {
-  /* servers */
-  /* channels and private sidebar */
-  /* chat */
-  /* members list */
-  /* friends list */
-  /* settings */
-}
 .visual-refresh .bg__960e4 {
   background-color: transparent;
 }
@@ -6081,11 +6089,38 @@ body {
 .visual-refresh .stackedBars__74017 {
   background-color: transparent;
 }
+.visual-refresh .container_f369db {
+  background-color: transparent;
+}
+.visual-refresh .container__9a337, .visual-refresh .container_faa96b {
+  background-color: var(--card-color);
+}
+.visual-refresh .container__9a337:hover, .visual-refresh .container_faa96b:hover {
+  background-color: var(--card-color-hover);
+}
+.visual-refresh .resizeHandle__01ae2 {
+  background-color: transparent;
+}
+.visual-refresh .container__01ae2 {
+  background-color: var(--main-content-color);
+  border: none;
+}
+.visual-refresh .pollContainer_b7e1cb {
+  background-color: var(--textarea-block-color);
+  border: none;
+}
+.visual-refresh .membersWrap_c8ffbb {
+  background-color: transparent;
+  border-left: none;
+}
 .visual-refresh .container__0f2e8 {
   background-color: var(--background-modifier-hover);
 }
 .visual-refresh .container__0f2e8.selected__0f2e8 {
   background-color: var(--background-modifier-selected);
+}
+.visual-refresh .memberInner__5d473 {
+  height: 100%;
 }
 .visual-refresh .container__133bf {
   border-top: none;

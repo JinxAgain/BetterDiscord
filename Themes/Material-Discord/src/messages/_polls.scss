@@ -80,3 +80,51 @@
         border-radius: calc(var(--media-radius) - 4px);
     }
 }
+
+/* POLLS -> VOTES */
+
+%pollVoterQuestion {
+    margin-right: 36px;
+
+    + %textMdMedium {
+        color: hsl(var(--accent-hsl--material-you)) !important;
+    }
+}
+
+%pollVoterContent {
+    %pollVotersScroller {
+        flex: 0 1 auto;
+        width: 200px;
+        padding: 0 8px 24px 24px;
+    }
+
+    %pollVoters {
+        flex: 0 1 auto;
+        width: 400px;
+    }
+
+    %pollVotersScroller,
+    %pollVoters {
+        background-color: transparent;
+    }
+
+    %pollVoter {
+        margin-right: calc(24px - var(--scrollbar-thin-width));
+    }
+
+    %settingsSide {
+        %settingsSideItem {
+            padding: 6px 10px;
+            border-radius: 22px;
+
+            &:hover {
+                background-color: var(--menu-item-hover);
+                transition: var(--default-time) var(--default-animation) background-color;
+            }
+
+            &%settingsSideItemSelected {
+                background-color: var(--menu-item-select);
+            }
+        }
+    }
+}

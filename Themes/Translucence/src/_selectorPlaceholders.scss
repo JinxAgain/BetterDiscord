@@ -751,10 +751,16 @@
 .barText__7aaec {
 	@extend %channelMentionsBarText !optional;
 }
-.unread__2ea32 {
+.bar__3b95d {
+	@extend %channelUnreadBar !optional;
+}
+.unread__3b95d {
 	@extend %channelUnreadPill !optional;
 }
-.unreadBottom__6be9f {
+.mention__3b95d {
+	@extend %channelMentionPill !optional;
+}
+.unreadBottom__629e4 {
 	@extend %channelUnreadPillBottom !optional;
 }
 .mentionsBadge-2ckrKL {
@@ -1029,6 +1035,9 @@
 }
 .container__37e49 {
 	@extend %accountPanel !optional;
+}
+.content__37e49 {
+	@extend %accountPanelContent !optional;
 }
 .gameActivityToggleAdded-Yd-YxC {
 	@extend %accountPanelGameActivityToggleAdded !optional;
@@ -1416,6 +1425,9 @@
 }
 .video_c8484a {
 	@extend %callVideo !optional;
+}
+.container__5aa3a {
+    @extend %callGradientContainer !optional;
 }
 .controlSection_bfe55a {
 	@extend %callControlSection !optional;
@@ -1816,6 +1828,9 @@
 .scrollableContainer__74017 {
 	@extend %channelTextAreaScrollable !optional;
 }
+.floatingBars__74017 {
+	@extend %channelTextAreaFloatingBars !optional;
+}
 .stackedBars__74017 {
 	@extend %channelTextAreaStackedBars !optional;
 }
@@ -1848,6 +1863,9 @@
 }
 .after_inlineCode_ada32f {
 	@extend %channelTextAreaInlineCodeAfter !optional;
+}
+.accessoryBar__74017 {
+	@extend %channelAccessoryBar !optional;
 }
 .channelAppLauncher_e6e74f {
     @extend %channelAppLauncher !optional;
@@ -2109,6 +2127,9 @@
 }
 .wrapper-22ayhK {
 	@extend %badge !optional;
+}
+.base__2b1f5 {
+	@extend %baseBadge !optional;
 }
 .numberBadge__2b1f5 {
 	@extend %numberBadge !optional;
@@ -2656,6 +2677,9 @@
 .bd-switch-symbol {
 	@extend %bdSwitchSymbol !optional;
 }
+.tabs__65d41 {
+	@extend %tabs !optional;
+}
 .tabBar__133bf, .tabBar_d6f9e9, .tabBar__81b3e, .top_b3f026, .topPill_b3f026, .settingsTabBar_f62afd, .settingsTabBar_dc2e0e {
 	@extend %tabBar !optional;
 }
@@ -2767,6 +2791,12 @@
 .tree_ef3116 {
 	@extend %guildsTree !optional;
 }
+.unreadMentionsIndicatorTop_ef3116 {
+	@extend %guildsUndreadMentionsIndicatorTop !optional;
+}
+.itemsContainer_ef3116 {
+	@extend %guildsItemsContainer !optional;
+}
 .scroller_ef3116 {
 	@extend %guilds !optional;
 }
@@ -2853,6 +2883,9 @@
 }
 .wrapper__48112 {
 	@extend %guildFolderWrapper !optional;
+}
+.isExpanded__48112 {
+	@extend %guildFolderWrapperIsExpanded !optional;
 }
 .expandedFolderBackground__48112 {
 	@extend %guildExpandedFolderBackground !optional;
@@ -3379,6 +3412,15 @@
 .activity__19b6d {
 	@extend %friendActivity !optional;
 }
+.userInfo__0a06e {
+	@extend %friendUserInfo !optional;
+}
+.hovered__0a06e {
+	@extend %friendUserInfoHovered !optional;
+}
+.discriminator__0a06e {
+	@extend %friendDiscriminator !optional;
+}
 .actionButton_f8fa06 {
 	@extend %friendActionButton !optional;
 }
@@ -3612,6 +3654,9 @@
 }
 .member__5d473 {
 	@extend %member !optional;
+}
+.memberInner__5d473 {
+	@extend %memberInner !optional;
 }
 .offline__5d473 {
 	@extend %memberOffline !optional;
@@ -4012,19 +4057,16 @@ pre {
 .banner_da5e8d {
 	@extend %inviteBanner !optional;
 }
-.content-17zlU6 {
+.content__99f8c {
 	@extend %inviteContent !optional;
 }
-.scroller-1xACMA {
+.scroller__67dba {
 	@extend %inviteScroller !optional;
 }
-.inviteRow-2Vjla6 {
+.inviteRow__67dba {
 	@extend %inviteRow !optional;
 }
-.h5-2RwDNl {
-	@extend %inviteTitle !optional;
-}
-.footer-Ql9fbL {
+.footer__67dba {
 	@extend %inviteFooter !optional;
 }
 .guildIcon_d5f3cd {
@@ -4909,6 +4951,9 @@ pre {
 .headerBar__8a7fc {
     @extend %discoverHeaderBar !optional;
 }
+.container__65d41 {
+    @extend %discoverHeaderBarTabsContainer !optional;
+}
 .backdrop__8a7fc {
 	@extend %discoverHeaderBarBackdrop !optional;
 }
@@ -4956,6 +5001,18 @@ pre {
 }
 .selected_fe77d6 {
     @extend %discoverSearchCategorySelected !optional;
+}
+.card__84e3e {
+    @extend %appCard !optional;
+}
+.avatar_f215b9 {
+    @extend %appCardAvatar !optional;
+}
+.bannerImage_b76d57 {
+    @extend %appCardBannerImage !optional;
+}
+.bannerContent_b76d57 {
+    @extend %appCardBannerContent !optional;
 }
 .container_a76561 {
 	@extend %joinHubContainer !optional;
@@ -5239,6 +5296,9 @@ pre {
 .scroller_affa7e {
 	@extend %emojiPickerScroller !optional;
 }
+.standardStickerShortcut__3ad28 {
+	@extend %emojiStandardStickerShortcut !optional;
+}
 .wrapper__4e6ce {
 	@extend %emojiCategoryWrapper !optional;
 }
@@ -5418,6 +5478,9 @@ pre {
 }
 .label_c1e9c4 {
 	@extend %menuPopoutLabel !optional;
+}
+.label__202d8 {
+	@extend %menuPopoutInnerLabel !optional;
 }
 .checkbox_c1e9c4 {
 	@extend %menuPopoutCheckbox !optional;
@@ -6061,13 +6124,13 @@ pre {
 .customHeader__5906b {
 	@extend %settingsCustomHeader !optional;
 }
-.sidebarScrollable_ff90b2 {
+.sidebarScrollable__53543 {
 	@extend %settingsContentSidebarScrollable !optional;
 }
-.scroller_ff90b2 {
+.scroller__53543 {
 	@extend %settingsContentSidebarScroller !optional;
 }
-.sidebarHeaderDefault-1BHqHQ {
+.sidebarHeaderDefault__0ab2c {
 	@extend %settingsContentSidebarHeaderDefault !optional;
 }
 .toolsContainer__23e6b {
@@ -6274,8 +6337,14 @@ pre {
 .item_b3f026 {
 	@extend %settingsSideItem !optional;
 }
+.disabled_b3f026 {
+	@extend %settingsSideItemDisabled !optional;
+}
 .selected_b3f026 {
 	@extend %settingsSideItemSelected !optional;
+}
+.themed_b3f026 {
+	@extend %settingsSideItemThemed !optional;
 }
 .tabBarItemContainer_c7e907 {
 	@extend %settingsTabBarItemContainer !optional;
@@ -6877,7 +6946,7 @@ pre {
 .channelsGranted-1nZk5r {
 	@extend %connectionsChannelsGranted !optional;
 }
-.integrationsWrapper_c7f964 {
+.integrationWrapper_c7f964 {
 	@extend %integrationWrapper !optional;
 }
 .integration_c7f964 {
@@ -7302,6 +7371,12 @@ pre {
 }
 .radioIconForeground__001a7 {
 	@extend %radioIconChecked !optional;
+}
+.radioIndicatorGroup__001a7 {
+    @extend %radioIndicatorGroup !optional;
+}
+.radioIndicator__001a7 {
+    @extend %radioIndicator !optional;
 }
 .radioText-3Mv1MY {
 	@extend %radioText !optional;
@@ -7906,6 +7981,9 @@ pre {
 .header_ab6641 {
 	@extend %recentMentionsHeader !optional;
 }
+.headerTabs_ab6641 {
+	@extend %recentMentionsHeaderTabs !optional;
+}
 .messageContainer__95796 {
 	@extend %recentMentionsMessagesContainer !optional;
 }
@@ -8251,7 +8329,7 @@ pre {
 .errorTitle__60626 {
 	@extend %eventErrorTitle !optional;
 }
-.settingCard_dd864e {
+.settingCard__1a4ef {
 	@extend %permissionsSettingCard !optional;
 }
 .active_dd864e {
@@ -9444,6 +9522,9 @@ pre {
 }
 .tabBar__0b563 {
 	@extend %channelsAndRolesTabBar !optional;
+}
+.scroller__5d7c9 {
+	@extend %channelsAndRolesScroller !optional;
 }
 .pageBody__5d7c9 {
 	@extend %channelsAndRolesPageBody !optional;
@@ -10648,6 +10729,27 @@ pre {
 .imageContainer_f69538 {
 	@extend %pollEndedImageContainer !optional;
 }
+.question__01c8c {
+    @extend %pollVoterQuestion !optional;
+}
+.content__01c8c {
+    @extend %pollVoterContent !optional;
+}
+.panel__01c8c {
+	@extend %pollVoterPanel !optional;
+}
+.scroller__01c8c {
+    @extend %pollVotersScroller !optional;
+}
+.votersListContainer__01c8c {
+    @extend %pollVotersListContainer !optional;
+}
+.voters__01c8c {
+    @extend %pollVoters !optional;
+}
+.voter__01c8c {
+    @extend %pollVoter !optional;
+}
 .overridePlaceholder_db81c6 {
 	@extend %notificationOverridePlaceholder !optional;
 }
@@ -10798,6 +10900,9 @@ pre {
 .contentContainer_a56260 {
     @extend %questsContentContainer !optional;
 }
+.container__60f82 {
+	@extend %questCardsContainer !optional;
+}
 .container_cec934 {
     @extend %questCard !optional;
 }
@@ -10816,8 +10921,14 @@ pre {
 .submenuWrapper_f2bc91 {
     @extend %questCardSubmenuWrapper !optional;
 }
+.container__956c6 {
+	@extend %questCardContentContainer !optional;
+}
 .rewardDescriptionContainer__956c6 {
     @extend %questCardRewardDescriptionContainer !optional;
+}
+.container__960ef {
+	@extend %questCardFooterContainer !optional;
 }
 .textOverflowBlur__956c6 {
 	@extend %questCardRewardTextOverflowBlur !optional;
@@ -10896,4 +11007,39 @@ pre {
 }
 #oneko {
 	@extend %vencordOneko !optional;
+}
+
+
+.visual-refresh {
+    @extend %visualRefresh !optional;
+}
+.density-cozy {
+    @extend %densityCozy !optional;
+}
+.density-compact {
+    @extend %densityCompact !optional;
+}
+.bar_c38106 {
+    @extend %bar !optional;
+}
+.leading_c38106 {
+    @extend %barLeading !optional;
+}
+.title_c38106 {
+    @extend %barTitleContainer !optional;
+}
+.title__85643 {
+    @extend %barTitle !optional;
+}
+.guildIcon__85643 {
+    @extend %barGuildIcon !optional;
+}
+.sidebarList_c48ade {
+    @extend %sidebarList !optional;
+}
+.sidebarResizeHandle_c48ade {
+    @extend %sidebarResizeHandle !optional;
+}
+.page_c48ade {
+    @extend %chatPage !optional;
 }
