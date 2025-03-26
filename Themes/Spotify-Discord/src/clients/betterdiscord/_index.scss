@@ -1,4 +1,8 @@
 @forward './plugins/';
 
 @forward './addons';
+@forward './buttons';
 @forward './modals';
+@forward './notices';
+@forward './store';
+@forward './toast';

@@ -25,9 +25,10 @@
 
     %bar {
         padding-left: 0;
+        padding-right: var(--spacing-4);
 
         %barLeading {
-            padding-left: 8px;
+            padding-left: var(--spacing-8);
         }
 
         %barTitle {
@@ -60,6 +61,37 @@
         %headerBarIconBadge {
             box-shadow: 0 0 0 4px var(--main-alt);
         }
+    }
+
+	%titlebarWinButton {
+        --app-title-bar-height: var(--custom-app-top-bar-height);
+        width: calc(var(--app-title-bar-height) / 1.325);
+
+		&%titlebarWinButtonMinMax {
+            &:nth-of-type(1) {
+				&:hover {
+					&:after {
+						background-color: var(--app-button-min);
+					}
+				}
+
+				&:before {
+					@include add-icon(var(--app-button-min), window_minimize);
+				}
+			}
+
+			&:nth-of-type(2) {
+				&:hover {
+					&:after {
+						background-color: var(--app-button-max);
+					}
+				}
+
+				&:before {
+					@include add-icon(var(--app-button-max), window_maximize);
+				}
+			}
+		}
     }
 
     /* friends list */
@@ -129,6 +161,24 @@
     %privateChannelsSearchBar {
         border-bottom:  none;
         box-shadow: var(--shadow-ledge);
+
+        %buttonFilled%buttonPrimary {
+            --button-padding: 0 16px;
+            --button-background: var(--input-color);
+            --button-text-color: var(--input-text-color);
+
+            %buttonContents {
+                margin: 0;
+            }
+        }
+    }
+
+    %privateChannel {
+        &:not(%privateChannelDm) {
+            %privateChannelLink {
+                padding: 0 var(--spacing-16);
+            }
+        }
     }
 
     %channelsContainer {
@@ -193,7 +243,12 @@
     }
 
     %activityPanel {
+        padding: 0 8px;
         border-radius: var(--sidebar-panel-radius-small);
+
+        %activityPanelBody {
+            height: 100%;
+        }
     }
 
     %connectionPanel {
@@ -216,6 +271,22 @@
     %accountPanelContent {
         min-height: 100%;
         padding: 0 8px;
+    }
+
+    /* quickswitcher */
+
+    %quickswitcher {
+        background-color: var(--popout-color);
+        border: none;
+        box-shadow: var(--shadow-3dp);
+
+        %quickswitcherInput {
+            border: none;
+
+            &::-webkit-input-placeholder {
+                color: var(--input-placeholder-color);
+            }
+        }
     }
 
     /* collapsed sidebar */
@@ -242,10 +313,26 @@
                 border-radius: var(--sidebar-panel-radius-big);
             }
 
+            %accountPanelAvatarWrapper {
+                justify-content: center;
+            }
+
             %spotifyPanelCoverWrapper {
                 width: 44px;
                 min-width: 44px;
                 min-height: 44px;
+            }
+
+            %accountPanelButtons {
+                display: none;
+            }
+
+            %spotifyPanelTimelineBarText {
+                justify-content: center;
+
+                :last-child {
+                    display: none;
+                }
             }
         }
     }
@@ -373,7 +460,11 @@
     }
 
     %chatForm {
+        padding: 0;
+        
         %channelTextArea {
+            --main-textarea-radius: 27px;
+
             background-color: var(--main-textarea-color);
             border: none;
             box-shadow: none;
@@ -388,14 +479,6 @@
             }
         }
 
-        %channelInfo {
-            height: 44px;
-            margin: 12px 0;
-            background-color: var(--main-textarea-color);
-            border-radius: var(--main-textarea-radius);
-            border: none;
-        }
-
         %channelTextAreaTyping {
             position: static;
             width: unset;
@@ -403,9 +486,33 @@
         }
     }
 
+    %channelTextAreaAttachButton {
+        padding-right: var(--spacing-8);
+    }
+
+    %channelInfo {
+        //height: 56px;
+        margin: 12px 16px;
+        background-color: var(--main-textarea-color);
+        //border-radius: 28px;
+        border: none;
+
+        %channelInfoButtonContainer {
+            //margin-right: 10px
+        }
+    }
+
     %channelBottomBarArea {
         margin: 0;
         padding: 0 16px;
+
+        + %channelTextAreaTyping {
+            position: absolute;
+            width: calc(100% - (var(--scrollbar-width) + var(--spacing-16)));
+            left: unset;
+            right: var(--spacing-16);
+            background-color: var(--typing-color);
+        }
     }
 
     %messagesErrorBar {
@@ -418,6 +525,10 @@
 
     %channelTextAreaStackedBars {
         background-color: var(--main-textarea-color);
+
+        &:first-child {
+            border-radius: var(--main-textarea-radius) var(--main-textarea-radius) 0 0;
+        }
 
         &:not(:last-child) {
             border-bottom: none;
@@ -507,6 +618,24 @@
         border: none;
     }
 
+    %forumGuidelinesContainer {
+        background-color: var(--card-color-filled);
+        border: none;
+    }
+
+    %forumGuidelinesDescriptionContainer {
+        background-color: var(--card-color-filled);
+        border-radius: calc(var(--card-radius-big) / 1.4);
+    }
+
+    %postThreadStartConversationBox {
+        background-color: var(--card-color-filled);
+
+        &:after {
+            border-top-color: var(--card-color-filled);
+        }
+    }
+
     %postPill {
         border: none;
     }
@@ -558,6 +687,11 @@
 
     %threadEmbed {
         background-color: var(--attachment-color);
+        border: none;
+    }
+
+    %inviteWrapper {
+        border-radius: var(--media-radius);
         border: none;
     }
 
@@ -657,6 +791,13 @@
         border: none;
     }
 
+    /* invite accept modal */
+
+    %acceptInviteEditProfileContainer {
+        background-color: var(--card-color-filled);
+        border: none;
+    }
+
     /* search results */
 
     %searchResultsWrap {
@@ -735,6 +876,10 @@
     }
 
     /* inputs */
+
+    %copyInput {
+        border: none;
+    }
 
     /* search bar */
 
@@ -820,6 +965,12 @@
         }
     }
 
+    /* tooltips */
+
+    %tooltip {
+        border: none;
+    }
+
     /* tab bar */
 
     %tabBar {
@@ -849,6 +1000,10 @@
         }
     }
 
+    %contextMenuQuickReaction {
+        border-radius: 50%;
+    }
+
     /* settings */
 
     %standardSidebarView,
@@ -873,6 +1028,14 @@
 
     %settingsSidebarScroller {
         background-color: var(--main-alt);
+    }
+
+    %settingsSidebar {
+        %triggerSettingsSearchBox {
+            background-color: var(--input-color);
+            border-radius: var(--input-radius);
+            border: none;
+        }
     }
 
     /* voice/video chat */
@@ -1016,22 +1179,185 @@
         }
     }
 
+    /* server access */
+
+    %severAccessRulesContainer {
+        %channelTextArea {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+        }
+    }
+
+    /* server boost */
+
+    %serverBoostStatusCard {
+        border-radius: var(--card-radius-big);
+    }
+
+    /* stickers */
+
+    %stickersTier {
+        border: none;
+        box-shadow: none;
+    }
+
+    /* image viewer */
+
+    %imageViewerActionButtons {
+        background-color: var(--popout-color);
+    }
+
+    %imageViewerCloseButton {
+        background-color: var(--popout-color);
+
+        %imageViewerCloseButtonInner {
+            border: none;
+        }
+    }
+
+    /* betterdiscord notice bar */
+
+    %bdNotices {
+        top: calc(var(--custom-app-top-bar-height) + var(--spacing-8));
+    }
+
     /* ui density */
 
+    &%densityDefault {
+        %privateChannel {
+            &:not(%privateChannelDm) {
+                %privateChannelLink {
+                    height: 42px;
+                }
+            }
+        }
+
+        [data-collapsed="true"] {
+            &%channelsSidebar {
+                %spotifyPanel {
+                    &%spotifyPanelWithTimeline {
+                        padding-top: 6px;
+                    }
+                }
+            }
+        }
+
+        %privateChannels {
+            --channel-radius: 22px;
+        }
+
+        %channelLink {
+            min-height: 34px;
+        }
+
+        %spotifyPanel {
+            &%spotifyPanelWithTimeline {
+                padding-top: 2px;
+
+                %spotifyPanelTimeline {
+                    margin: 2px 0;
+                }
+            }
+        }
+
+        %activityPanel {
+            height: 46px;
+        }
+
+        %accountPanel {
+            height: 48px !important;
+        }
+
+        %channelInfo {
+            height: 48px;
+            border-radius: 24px;
+
+            %channelInfoButtonContainer {
+                margin-right: 6px
+            }
+        }
+
+        %privateChannels,
+        %members {
+            --channel-radius: 21px;
+        }
+
+        %members {
+            %listItem {
+                height: 42px;
+            }
+        }
+
+        %settingsSidebar {
+            %settingsSideItem {
+                height: 32px;
+            }
+        }
+    }
+
     &%densityCozy {
+        %privateChannel {
+            &:not(%privateChannelDm) {
+                %privateChannelLink {
+                    height: 48px;
+                }
+            }
+        }
+
+        [data-collapsed="true"] {
+            &%channelsSidebar {
+                %spotifyPanel {
+                    &%spotifyPanelWithTimeline {
+                        padding-top: 8px;
+                    }
+                }
+            }
+        }
+
         %channelLink {
             min-height: 40px;
+        }
+
+        %spotifyPanel {
+            &%spotifyPanelWithTimeline {
+                padding-top: 4px;
+
+                &%spotifyPanelMaximized {
+                    padding-top: 0;
+                }
+
+                %spotifyPanelTimeline {
+                    margin: 6px 0 4px 0;
+                }
+            }
+        }
+
+        %activityPanel {
+            height: 56px;
         }
 
         %accountPanel {
             height: 56px !important;
         }
 
-        %members {
-            --channel-radius: 25px;
+        %channelInfo {
+            height: 56px;
+            border-radius: 28px;
 
+            %channelInfoButtonContainer {
+                margin-right: 10px
+            }
+        }
+
+        %privateChannels,
+        %members {
+            --channel-radius: 24px;
+        }
+
+        %members {
             %listItem {
-                height: 50px;
+                height: 48px;
             }
         }
 
@@ -1043,19 +1369,73 @@
     }
 
     &%densityCompact {
+        %privateChannel {
+            &:not(%privateChannelDm) {
+                %privateChannelLink {
+                    height: 38px;
+                }
+            }
+        }
+
+        [data-collapsed="true"] {
+            &%channelsSidebar {
+                %spotifyPanel {
+                    &%spotifyPanelWithTimeline {
+                        padding-top: 6px;
+                    }
+                }
+            }
+        }
+
+        %privateChannels {
+            --channel-radius: 19px;
+        }
+
         %channelLink {
-            min-height: 34px;
+            min-height: 28px;
+        }
+
+        %spotifyPanel {
+            &%spotifyPanelWithTimeline {
+                padding-top: 2px;
+
+                %spotifyPanelTimeline {
+                    margin: 2px 0;
+                }
+            }
+        }
+
+        %activityPanel {
+            height: 44px;
         }
 
         %accountPanel {
             height: 44px !important;
         }
 
-        %members {
-            --channel-radius: 21px;
+        %channelInfo {
+            height: 48px;
+            border-radius: 24px;
 
+            %channelInfoButtonContainer {
+                margin-right: 6px
+            }
+        }
+
+        %privateChannels,
+        %members {
+            --channel-radius: 20px;
+        }
+
+        %members {
             %listItem {
-                height: 42px;
+                height: 40px;
+            }
+        }
+
+        %settingsSidebar {
+            %settingsSideItem {
+                height: 28px;
             }
         }
     }

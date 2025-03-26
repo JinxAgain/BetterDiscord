@@ -127,10 +127,10 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
  *  CONTEXT MENU ICONS
  *
  */
-.menu_c1e9c4 [id*=user-context-][role=menuitem].item_c1e9c4, .menu_c1e9c4 [id*=guild-context-].item_c1e9c4, .menu_c1e9c4 [id*=channel-context-].item_c1e9c4, .menu_c1e9c4 [id*=gdm-context-].item_c1e9c4, .menu_c1e9c4 [id*=-image].item_c1e9c4, .menu_c1e9c4 [id*=-native-link].item_c1e9c4, .menu_c1e9c4 [id*=thread-context-].item_c1e9c4, .menu_c1e9c4 [id*=text-context-].item_c1e9c4, .menu_c1e9c4 [id*=user-settings-cog-].item_c1e9c4, .menu_c1e9c4 [id*=user-profile-actions-].item_c1e9c4, .menu_c1e9c4 [id*=user-profile-overflow-menu-].item_c1e9c4, .menu_c1e9c4 #manage-streams-report-stream-problem.item_c1e9c4, .menu_c1e9c4 #clips-context-clips-settings.item_c1e9c4, .menu_c1e9c4 #message-favorite.item_c1e9c4, .menu_c1e9c4 #message-unfavorite.item_c1e9c4, .menu_c1e9c4 #message-search-google.item_c1e9c4, .menu_c1e9c4 #message-remove-reactions.item_c1e9c4, .menu_c1e9c4 #message-remove-emoji-reactions.item_c1e9c4, .menu_c1e9c4 #message-actions-remove-reactions.item_c1e9c4, .menu_c1e9c4 #textarea-context-add-to-dictionary.item_c1e9c4, .menu_c1e9c4 #textarea-context-languages.item_c1e9c4 {
+.menu_c1e9c4 [id*=user-context-][role=menuitem].item_c1e9c4, .menu_c1e9c4 [id*=guild-context-].item_c1e9c4, .menu_c1e9c4 [id*=channel-context-].item_c1e9c4, .menu_c1e9c4 [id*=gdm-context-].item_c1e9c4, .menu_c1e9c4 [id*=-image].item_c1e9c4, .menu_c1e9c4 [id*=-native-link].item_c1e9c4, .menu_c1e9c4 [id*=thread-context-].item_c1e9c4, .menu_c1e9c4 [id*=text-context-].item_c1e9c4, .menu_c1e9c4 [id*=user-settings-cog-].item_c1e9c4, .menu_c1e9c4 [id*=user-profile-actions-].item_c1e9c4, .menu_c1e9c4 [id*=user-profile-overflow-menu-].item_c1e9c4, .menu_c1e9c4 [id*=quests-entry-].item_c1e9c4, .menu_c1e9c4 #manage-streams-report-stream-problem.item_c1e9c4, .menu_c1e9c4 #clips-context-clips-settings.item_c1e9c4, .menu_c1e9c4 #message-favorite.item_c1e9c4, .menu_c1e9c4 #message-unfavorite.item_c1e9c4, .menu_c1e9c4 #message-search-google.item_c1e9c4, .menu_c1e9c4 #message-remove-reactions.item_c1e9c4, .menu_c1e9c4 #message-remove-emoji-reactions.item_c1e9c4, .menu_c1e9c4 #message-actions-remove-reactions.item_c1e9c4, .menu_c1e9c4 #textarea-context-add-to-dictionary.item_c1e9c4, .menu_c1e9c4 #textarea-context-languages.item_c1e9c4 {
   display: flex;
 }
-.menu_c1e9c4 [id*=user-context-][role=menuitem].item_c1e9c4:after, .menu_c1e9c4 [id*=guild-context-].item_c1e9c4:after, .menu_c1e9c4 [id*=channel-context-].item_c1e9c4:after, .menu_c1e9c4 [id*=gdm-context-].item_c1e9c4:after, .menu_c1e9c4 [id*=-image].item_c1e9c4:after, .menu_c1e9c4 [id*=-native-link].item_c1e9c4:after, .menu_c1e9c4 [id*=thread-context-].item_c1e9c4:after, .menu_c1e9c4 [id*=text-context-].item_c1e9c4:after, .menu_c1e9c4 [id*=user-settings-cog-].item_c1e9c4:after, .menu_c1e9c4 [id*=user-profile-actions-].item_c1e9c4:after, .menu_c1e9c4 [id*=user-profile-overflow-menu-].item_c1e9c4:after, .menu_c1e9c4 #manage-streams-report-stream-problem.item_c1e9c4:after, .menu_c1e9c4 #clips-context-clips-settings.item_c1e9c4:after, .menu_c1e9c4 #message-favorite.item_c1e9c4:after, .menu_c1e9c4 #message-unfavorite.item_c1e9c4:after, .menu_c1e9c4 #message-search-google.item_c1e9c4:after, .menu_c1e9c4 #message-remove-reactions.item_c1e9c4:after, .menu_c1e9c4 #message-remove-emoji-reactions.item_c1e9c4:after, .menu_c1e9c4 #message-actions-remove-reactions.item_c1e9c4:after, .menu_c1e9c4 #textarea-context-add-to-dictionary.item_c1e9c4:after, .menu_c1e9c4 #textarea-context-languages.item_c1e9c4:after {
+.menu_c1e9c4 [id*=user-context-][role=menuitem].item_c1e9c4:after, .menu_c1e9c4 [id*=guild-context-].item_c1e9c4:after, .menu_c1e9c4 [id*=channel-context-].item_c1e9c4:after, .menu_c1e9c4 [id*=gdm-context-].item_c1e9c4:after, .menu_c1e9c4 [id*=-image].item_c1e9c4:after, .menu_c1e9c4 [id*=-native-link].item_c1e9c4:after, .menu_c1e9c4 [id*=thread-context-].item_c1e9c4:after, .menu_c1e9c4 [id*=text-context-].item_c1e9c4:after, .menu_c1e9c4 [id*=user-settings-cog-].item_c1e9c4:after, .menu_c1e9c4 [id*=user-profile-actions-].item_c1e9c4:after, .menu_c1e9c4 [id*=user-profile-overflow-menu-].item_c1e9c4:after, .menu_c1e9c4 [id*=quests-entry-].item_c1e9c4:after, .menu_c1e9c4 #manage-streams-report-stream-problem.item_c1e9c4:after, .menu_c1e9c4 #clips-context-clips-settings.item_c1e9c4:after, .menu_c1e9c4 #message-favorite.item_c1e9c4:after, .menu_c1e9c4 #message-unfavorite.item_c1e9c4:after, .menu_c1e9c4 #message-search-google.item_c1e9c4:after, .menu_c1e9c4 #message-remove-reactions.item_c1e9c4:after, .menu_c1e9c4 #message-remove-emoji-reactions.item_c1e9c4:after, .menu_c1e9c4 #message-actions-remove-reactions.item_c1e9c4:after, .menu_c1e9c4 #textarea-context-add-to-dictionary.item_c1e9c4:after, .menu_c1e9c4 #textarea-context-languages.item_c1e9c4:after {
   position: relative;
   content: " ";
   width: 18px;
@@ -142,7 +142,7 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 #user-settings-cog-Accessibility--input.item_c1e9c4, .menu_c1e9c4 #user-settings-cog-Voice___Video--input.item_c1e9c4, .menu_c1e9c4 #user-settings-cog-Voice___Video--output.item_c1e9c4, .menu_c1e9c4 #user-settings-cog-Experiments--experiments-search.item_c1e9c4 {
   display: block;
 }
-.menu_c1e9c4 [aria-haspopup=true].item_c1e9c4:after, .menu_c1e9c4 [role=menuitemcheckbox].item_c1e9c4:after, .menu_c1e9c4 [id*=devmode-copy-id].item_c1e9c4:after, .menu_c1e9c4 [id*=channel-context-transfer-xbox].item_c1e9c4:after, .menu_c1e9c4 [id*=channel-context-transfer-playstation].item_c1e9c4:after, .menu_c1e9c4 [id=channel-context-0].item_c1e9c4:after, .menu_c1e9c4 [id=channel-context-1].item_c1e9c4:after, .menu_c1e9c4 [id=channel-context-2].item_c1e9c4:after, .menu_c1e9c4 [id=channel-context-3].item_c1e9c4:after, .menu_c1e9c4 #user-context-user-volume.item_c1e9c4:after, .menu_c1e9c4 #user-context-report-event.item_c1e9c4:after, .menu_c1e9c4 #user-context-vc-copy-user-url.item_c1e9c4:after, .menu_c1e9c4 #guild-context-hide-muted-channels.item_c1e9c4:after, .menu_c1e9c4 #thread-context-search.item_c1e9c4:after, .menu_c1e9c4 #thread-context-pins.item_c1e9c4:after {
+.menu_c1e9c4 [aria-haspopup=true].item_c1e9c4:after, .menu_c1e9c4 [role=menuitemcheckbox].item_c1e9c4:after, .menu_c1e9c4 [id*=devmode-copy-id].item_c1e9c4:after, .menu_c1e9c4 [id*=channel-context-transfer-xbox].item_c1e9c4:after, .menu_c1e9c4 [id*=channel-context-transfer-playstation].item_c1e9c4:after, .menu_c1e9c4 [id=channel-context-0].item_c1e9c4:after, .menu_c1e9c4 [id=channel-context-1].item_c1e9c4:after, .menu_c1e9c4 [id=channel-context-2].item_c1e9c4:after, .menu_c1e9c4 [id=channel-context-3].item_c1e9c4:after, .menu_c1e9c4 #user-context-user-volume.item_c1e9c4:after, .menu_c1e9c4 #user-context-report-event.item_c1e9c4:after, .menu_c1e9c4 #user-context-vc-copy-user-url.item_c1e9c4:after, .menu_c1e9c4 #guild-context-hide-muted-channels.item_c1e9c4:after, .menu_c1e9c4 #thread-context-search.item_c1e9c4:after, .menu_c1e9c4 #thread-context-pins.item_c1e9c4:after, .menu_c1e9c4 #image-menu-media-viewer-copy-image.item_c1e9c4:after {
   display: none;
 }
 .menu_c1e9c4 #user-context-user-volume.item_c1e9c4 {
@@ -392,7 +392,7 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/library_add.svg);
 }
 .menu_c1e9c4 #textarea-context-languages.item_c1e9c4:after {
-  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/translate.svg);
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/language.svg);
 }
 .menu_c1e9c4 #guild-context-mark-guild-read.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/visibility.svg);
@@ -520,6 +520,12 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 #user-profile-overflow-menu-report-user.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/report.svg);
 }
+.menu_c1e9c4 #quests-entry-display-disclosure.item_c1e9c4:after {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/help.svg);
+}
+.menu_c1e9c4 #quests-entry-hide-entrypoint.item_c1e9c4:after {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/visibility_off.svg);
+}
 .menu_c1e9c4 #manage-streams-report-stream-problem.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/warning.svg);
 }
@@ -552,6 +558,9 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 }
 .menu_c1e9c4 #user-settings-cog-Connections.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/link.svg);
+}
+.menu_c1e9c4 #user-settings-cog-Settings_Clips.item_c1e9c4:after {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/movie.svg);
 }
 .menu_c1e9c4 #user-settings-cog-Friend_Requests.item_c1e9c4:after {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/person_add.svg);
@@ -664,25 +673,23 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 #message-copy.item_c1e9c4 .hintContainer_c1e9c4, .menu_c1e9c4 [id*=textarea-context-].item_c1e9c4 .hintContainer_c1e9c4 {
   width: 18px;
   height: 18px;
-  /*margin-left: 0;
-  margin-right: 12px;*/
+  margin: 0;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 100%;
   font-size: 0;
 }
 .menu_c1e9c4 #message-copy.item_c1e9c4 .hintContainer_c1e9c4 {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/content_copy.svg);
-  -webkit-mask-repeat: no-repeat;
 }
 .menu_c1e9c4 #textarea-context-copy.item_c1e9c4 .hintContainer_c1e9c4 {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/content_copy.svg);
-  -webkit-mask-repeat: no-repeat;
 }
 .menu_c1e9c4 #textarea-context-cut.item_c1e9c4 .hintContainer_c1e9c4 {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/content_cut.svg);
-  -webkit-mask-repeat: no-repeat;
 }
 .menu_c1e9c4 #textarea-context-paste.item_c1e9c4 .hintContainer_c1e9c4 {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/paste.svg);
-  -webkit-mask-repeat: no-repeat;
 }
 .menu_c1e9c4 [aria-haspopup=true].item_c1e9c4 {
   flex-direction: row;
@@ -790,6 +797,9 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 .menu_c1e9c4 [aria-haspopup=true]#image-context-imageutilities-submenu-search.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/search.svg);
 }
+.menu_c1e9c4 [aria-haspopup=true]#image-menu-media-viewer-details.item_c1e9c4:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/info.svg);
+}
 .menu_c1e9c4 [aria-haspopup=true]#thread-context-mute-channel.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/volume_up.svg);
 }
@@ -852,6 +862,15 @@ path[d="M13.6698 8.91016C14.5646 10.1567 16.3407 10.3342 17.4866 9.44283C17.4957
 }
 .menu_c1e9c4 [aria-haspopup=true]#user-profile-overflow-menu-invite-to-server.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/add_circle.svg);
+}
+.menu_c1e9c4 [aria-haspopup=true]#audio-device-context-input-devices.item_c1e9c4:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/mic.svg);
+}
+.menu_c1e9c4 [aria-haspopup=true]#audio-device-context-output-devices.item_c1e9c4:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/volume_up.svg);
+}
+.menu_c1e9c4 [aria-haspopup=true]#video-device-context-video-devices.item_c1e9c4:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/videocam.svg);
 }
 .menu_c1e9c4 [aria-haspopup=true]#manage-streams-stream-settings.item_c1e9c4:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/settings.svg);
@@ -1396,6 +1415,9 @@ path[d="M3 1a1 1 0 0 1 1 1v.82l8.67-1.45A2 2 0 0 1 15 3.35v1.47l5.67-.95A2 2 0 0
 .sidebar__23e6b [data-tab-id=Connections].item_b3f026:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/link.svg);
 }
+.sidebar__23e6b [data-tab-id="Settings Clips"].item_b3f026:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/movie.svg);
+}
 .sidebar__23e6b [data-tab-id="Discord Nitro"].item_b3f026:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/nitro.svg);
 }
@@ -1443,6 +1465,15 @@ path[d="M3 1a1 1 0 0 1 1 1v.82l8.67-1.45A2 2 0 0 1 15 3.35v1.47l5.67-.95A2 2 0 0
 }
 .sidebar__23e6b [data-tab-id=Advanced].item_b3f026:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/integrations.svg);
+}
+.sidebar__23e6b [data-tab-id="Activity Privacy"].item_b3f026:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/shield_lock.svg);
+}
+.sidebar__23e6b [data-tab-id="Game Activity"].item_b3f026:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/stadia_controller.svg);
+}
+.sidebar__23e6b [data-tab-id=Overlay].item_b3f026:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/layers.svg);
 }
 .sidebar__23e6b [data-tab-id=Settings].item_b3f026:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/settings.svg);
@@ -1506,6 +1537,9 @@ path[d="M3 1a1 1 0 0 1 1 1v.82l8.67-1.45A2 2 0 0 1 15 3.35v1.47l5.67-.95A2 2 0 0
 }
 .sidebar__23e6b [data-tab-id=VANITY_URL].item_b3f026:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/link.svg);
+}
+.sidebar__23e6b [data-tab-id=ACCESS].item_b3f026:before {
+  -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/lock_open.svg);
 }
 .sidebar__23e6b [data-tab-id=INTEGRATIONS].item_b3f026:before {
   -webkit-mask-image: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/outline/integrations.svg);

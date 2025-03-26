@@ -18,6 +18,7 @@
     		content: " ";
     		width: 20px;
     		height: 20px;
+            flex-shrink: 0;
     		background-repeat: no-repeat;
     		background-position: center;
             background-color: var(--interactive-normal);
@@ -51,6 +52,7 @@
             'Authorized Apps':                  'apps',
             'Sessions':                         'devices',
             'Connections':                      'link',
+            'Settings Clips':                   'movie',
 
             'Discord Nitro':                    'nitro',
             'Nitro Server Boost':               'server_boost',
@@ -70,6 +72,10 @@
             'Streamer Mode':                    'live_tv',
             'Advanced':                         'integrations',
 
+            'Activity Privacy':                 'shield_lock',
+            'Game Activity':                    'stadia_controller',
+            'Overlay':                          'layers',
+
             'Settings':                         'settings',
             'updates':                          'update',
             'customcss':                        'code',
@@ -88,6 +94,10 @@
 
             // SERVER SETTINGS
 
+            'PROFILE':                          'badge',
+            'ENGAGEMENT':                       'diversity_1',
+            'BOOST_PERKS':                      'workspace_premium',
+
             'OVERVIEW':                         'dashboard',
             'ROLES':                            'person',
             'EMOJI':                            'emoji',
@@ -96,6 +106,7 @@
             'SOUNDBOARD':                       'volume_up',
             'GUILD_TEMPLATES':                  'template',
             'VANITY_URL':                       'link',
+            'ACCESS':                           'lock_open',
 
             'INTEGRATIONS':                     'integrations',
             'APP_DIRECTORY':                    'apps',
@@ -117,7 +128,7 @@
             'GUILD_PREMIUM':                    'server_boost',
 
             'MEMBERS':                          'people',
-            'INSTANT_INVITES':                  'person_add',
+            'INVITES':                          'person_add',
             'DELETE':                           'delete'
         );
 
