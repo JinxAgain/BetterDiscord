@@ -127,6 +127,7 @@
     /* server list */
 
     %guildsWrapper {
+        /* CODE FOR MOVING STATUS AREA TO ORIGINAL SPOT */
         //margin-bottom: 0;
     }
 
@@ -182,6 +183,9 @@
     }
 
     %channelsContainer {
+        /* CODE FOR MOVING STATUS AREA TO ORIGINAL SPOT */
+        //padding-bottom: calc(var(--custom-app-panels-height,0) + 12px);
+
         background-color: var(--main-color);
     }
 
@@ -232,9 +236,10 @@
         bottom: var(--spacing-12);
         margin: 0;
 
+        /* CODE FOR MOVING STATUS AREA TO ORIGINAL SPOT */
         /*width: calc(100% - 94px);
-        left: 72px;
-        bottom: 0;*/
+        left: 92px;
+        bottom: 12px;*/
 
         border-radius: var(--sidebar-panel-radius-big);
         border: none;
@@ -346,6 +351,7 @@
     }
 
     %headerBar {
+        padding: 0 9px 0 16px;
         border-top: none;
 
         &%headerBarTransparent {
@@ -461,7 +467,7 @@
 
     %chatForm {
         padding: 0;
-        
+
         %channelTextArea {
             --main-textarea-radius: 27px;
 
@@ -572,7 +578,39 @@
         border: none;
     }
 
+    /* markup */
+
+    %markup {
+        %codeContainer {
+            max-width: none;
+        }
+
+        pre code {
+            background-color: transparent;
+            border: none;
+        }
+    }
+
+    %channelTextAreaInlineCode,
+    %channelTextAreaInlineCodeBefore,
+    %channelTextAreaInlineCodeAfter {
+    	background-color: var(--attachment-color);
+        border: none;
+    }
+
+    %channelTextAreaInlineCodeBefore {
+    	border-radius: var(--media-radius) 0 0 var(--media-radius);
+    }
+
+    %channelTextAreaInlineCodeAfter {
+    	border-radius: 0 var(--media-radius) var(--media-radius) 0;
+    }
+
     /* chat area search */
+
+    %chatOuterSearchContainer {
+        margin-right: 0;
+    }
 
     %chatSearch {
         --input-height: 32px;
@@ -1364,6 +1402,7 @@
         %settingsSidebar {
             %settingsSideItem {
                 height: 40px;
+                line-height: 40px;
             }
         }
     }
@@ -1436,6 +1475,7 @@
         %settingsSidebar {
             %settingsSideItem {
                 height: 28px;
+                line-height: 28px;
             }
         }
     }
